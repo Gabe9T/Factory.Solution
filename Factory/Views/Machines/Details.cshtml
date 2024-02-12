@@ -1,0 +1,28 @@
+@model Factory.Models.Machine
+
+<div class="content">
+    <div class="details">
+        <h2>Details</h2>
+        <h3>Name: @Model.Name</h3>
+        <hr />
+        @if (Model.JoinEntities == null || !Model.JoinEntities.Any())
+        {
+            <p>This machine is not associated with any engineers.</p>
+        }
+        else
+        {
+            <h4>Engineers working on this machine:</h4>
+            <ul>
+                @foreach (var join in Model.JoinEntities)
+                {
+                    <li>@join.Engineer.Name - @join.Engineer.Specialty</li>
+                }
+            </ul>
+        }
+        <br />
+        @Html.ActionLink("Assign an engineer to this machine", "AddEngineer", new { id = Model.MachineId }, new { @class = "btn btn-green" }) |
+        @Html.ActionLink("Edit machine", "Edit", new { id = Model.MachineId }, new { @class = "btn btn-yellow" }) |
+        @Html.ActionLink("Delete machine", "Delete", new { id = Model.MachineId }, new { @class = "btn btn-red" }) |
+        @Html.ActionLink("Back To List", "Index", "Machines", null, new { @class = "btn btn-blue" })
+    </div>
+</div>

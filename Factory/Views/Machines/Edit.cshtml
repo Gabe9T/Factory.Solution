@@ -1,0 +1,23 @@
+@model Factory.Models.Machine
+
+<div class="content">
+    <h2>Edit</h2>
+
+    <h4>Edit this machine: @Html.DisplayFor(model => model.Name)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.MachineId)
+
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+
+        @Html.LabelFor(model => model.Specialty)
+        @Html.EditorFor(model => model.Specialty)
+
+        <input type="submit" value="Save" class="btn btn-green" />
+    }
+    <br />
+
+    @Html.ActionLink("Back To List", "Index", "Machines", null, new { @class = "btn btn-blue" })
+</div>
