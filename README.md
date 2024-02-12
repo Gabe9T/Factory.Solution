@@ -24,8 +24,8 @@ This application allows the user to manage the factory's engineers and machines
 * Navigate to the production directory Factory.
 * Within the production directory "Factory", create a new file called `appsettings.json`.
 * Within `appsettings.json`, put in the following code, replacing the `database`, `uid`, and `pwd` values with your own username and password for MySQL.
-```json 
-* or use sql dump file 
+* or use sql dump file
+```json  
 {
   "ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
