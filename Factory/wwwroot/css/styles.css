@@ -1,0 +1,155 @@
+body {
+    background-color: #FFFAFA;
+}
+
+.card {
+    width: 12.5vw;
+    height: 12.5vw;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    color: black;
+}
+
+.btn-red {
+    background-color: #BD0808;
+}
+
+.btn-red:hover {
+    background-color: #BD0808;
+}
+
+.btn-blue {
+    background-color: #048BA8;
+}
+
+.btn-blue:hover {
+    background-color: #048BA8;
+}
+
+.btn-green {
+    background-color: #16DB93;
+}
+
+.btn-green:hover {
+    background-color: #16DB93;
+}
+
+.btn-yellow {
+    background-color: #FDC478;
+}
+
+.btn-yellow:hover {
+    background-color: #FDC478;
+}
+
+
+.card:hover {
+    transform: scale(1.21);
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.title h1 {
+    padding-top: 50px;
+    font-size: 3em;
+}
+
+.filler {
+    width: 25%;
+}
+
+.button-control {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 50%;
+}
+
+.button-container .btn {
+    background-color: #16DB93;
+    margin: 10px;
+}
+.center {
+    justify-content: center;
+
+}
+
+.left-menu {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.search-select {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-input .button {
+    background-color: #89FC00;
+    border: 0;
+    border-radius: 4px;
+}
+
+.search-bar {
+    width: 80%;
+    padding-top: 50px;
+}
+
+.details {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+ul {
+    text-align: center;
+    width: 25%;
+    margin: auto;
+}
+
+.right-spacer {
+    float: right;
+    width: 20%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+a {
+    color: #9067C6;
+}
