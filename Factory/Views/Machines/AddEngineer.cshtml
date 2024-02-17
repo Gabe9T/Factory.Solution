@@ -10,12 +10,12 @@
         @Html.HiddenFor(model => model.MachineId)
 
         @Html.Label("Select a Engineer")
-        @Html.DropDownList("EngineerId")
+        @Html.DropDownList("EngineerId", new SelectList(ViewBag.Engineers, "EngineerId", "Name"))
 
         <input class="button" type="submit" value="Add" />
     }
 
-    <p>@Html.ActionLink("Back to Engineers", "Index")</p>
+    <p>@Html.ActionLink("Back to Machines", "Index")</p>
 
     @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-blue " })
 </div>

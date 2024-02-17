@@ -69,7 +69,22 @@ namespace Factory.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-        [HttpPost]
+
+[HttpGet]
+public ActionResult AddEngineer(int id)
+{
+    var machine = _db.Machines.FirstOrDefault(m => m.MachineId == id);
+    if (machine == null)
+    {
+        return NotFound();
+    }
+
+    ViewBag.MachineId = machine.MachineId;
+    ViewBag.Engineers = _db.Engineers.ToList();
+    return View(machine);
+}
+
+[HttpPost]
 public ActionResult AddMachine(int id, int machineId)
 {
     var engineer = _db.Engineers.Include(e => e.JoinEntities).FirstOrDefault(e => e.EngineerId == id);

@@ -1,21 +1,21 @@
 @model Factory.Models.Engineer
 
 <div class="content">
-    <h2>Add a machine</h2>
+    <h2>Add a Machine</h2>
 
-    <h4>Add a machine to : @Model.Name</h4>
+    <h4>Add a Machine to : @Model.Name</h4>
 
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.EngineerId)
 
-        @Html.Label("Select a machine")
-        @Html.DropDownList("machineId")
+        @Html.Label("Select a Machine")
+        @Html.DropDownList("MachineId", new SelectList(ViewBag.Machines, "MachineId", "Name"))
 
         <input class="button" type="submit" value="Add" />
     }
 
-    <p>@Html.ActionLink("Back to engineers", "Index")</p>
+    <p>@Html.ActionLink("Back to Engineers", "Index")</p>
 
     @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-blue " })
 </div>
